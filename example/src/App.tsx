@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { initScalers } from 'react-native-scaler';
-const { moderateScale, ScaledSheet } = initScalers();
+const { moderateScaleWidth, ScaledSheet } = initScalers();
 
 const scaledStyles = ScaledSheet.create({
   container: {
@@ -12,13 +12,13 @@ const scaledStyles = ScaledSheet.create({
     justifyContent: 'center',
   },
   button: {
-    width: moderateScale(250),
-    height: '80@ms',
+    width: moderateScaleWidth(250),
+    height: '80@mw',
     borderColor: '#696969',
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
-    marginVertical: '25@vs',
+    marginVertical: '25@sh',
     elevation: 3,
     shadowColor: 'black',
     shadowOpacity: 0.25,
@@ -29,7 +29,7 @@ const scaledStyles = ScaledSheet.create({
     },
   },
   text: {
-    fontSize: '20@ms0.3',
+    fontSize: '20@mw.3',
     fontWeight: 'bold',
   },
 });
@@ -67,6 +67,7 @@ const regularStyles = StyleSheet.create({
 
 const Home = () => {
   const [isRegular, setIsRegular] = useState(true);
+
   let styles = isRegular ? regularStyles : scaledStyles;
   const onChange = () => {
     setIsRegular((prev) => !prev);
