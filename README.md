@@ -11,11 +11,16 @@ npm install react-native-scaler
 ## Usage
 
 ```js
-import { multiply } from 'react-native-scaler';
+import { initScalers } from 'react-native-scaler';
+const {
+  scale,
+  verticalScale,
+  moderateScale,
+  moderateVerticalScale,
+  ScaledSheet,
+} = initScalers();
 
 // ...
-
-const result = await multiply(3, 7);
 ```
 
 ## Contributing
