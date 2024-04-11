@@ -4,8 +4,7 @@ import deepMap from './deep-map';
 import { createScalers } from './scaling-units';
 import type { StyleProp } from 'react-native';
 
-const validScaleSheetRegex =
-  /^(\-?\d+(?:\.\d{1,3})?)@(mv?s(\d+(?:\.\d{1,2})?)?|s|vs)r?$/;
+const validScaleSheetRegex = /^(\d+)@((?:sw|sh|mw|mh)(\d+(\.\d+)?|))$/;
 
 type BaseStyle = StyleProp<ViewStyle | TextStyle | ImageStyle | any>;
 
@@ -26,11 +25,11 @@ const scaledSheetCreator = (baseWidth = 350, baseHeight = 680) => {
 
     const size = parseFloat(regexExecResult[1]);
     let scaleFunc = regexExecResult[2];
-    const scaleFactor = regexExecResult?.[3]; // string or undefined
+    const scaleFactor = regexExecResult?.[3];
 
-    if (scaleFactor) scaleFunc = scaleFunc.slice(0, -scaleFactor.length); // Remove the factor from it
+    if (scaleFactor) scaleFunc = scaleFunc.slice(0, -scaleFactor.length);
 
-    const shouldRound = value.endsWith('r');
+    // const shouldRound = value.endsWith('r');
 
     let result: number = 0;
 
@@ -48,8 +47,8 @@ const scaledSheetCreator = (baseWidth = 350, baseHeight = 680) => {
         result = mh(size, scaleFactor);
         break;
     }
-
-    return shouldRound ? Math.round(result) : result;
+    // shouldRound ? Math.round(result) :
+    return result;
   };
 
   return {
