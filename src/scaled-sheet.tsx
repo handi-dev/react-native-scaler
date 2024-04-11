@@ -10,7 +10,7 @@ const validScaleSheetRegex =
 type BaseStyle = StyleProp<ViewStyle | TextStyle | ImageStyle | any>;
 
 const scaledSheetCreator = (baseWidth = 350, baseHeight = 680) => {
-  const { s, vs, ms, mvs } = createScalers(baseWidth, baseHeight);
+  const { sw, sh, mw, mh } = createScalers(baseWidth, baseHeight);
 
   const scaleByAnnotation = (value: string) => {
     if (!validScaleSheetRegex.test(value)) {
@@ -35,17 +35,17 @@ const scaledSheetCreator = (baseWidth = 350, baseHeight = 680) => {
     let result: number = 0;
 
     switch (scaleFunc) {
-      case 's':
-        result = s(size);
+      case 'sw':
+        result = sw(size);
         break;
-      case 'vs':
-        result = vs(size);
+      case 'sh':
+        result = sh(size);
         break;
-      case 'ms':
-        result = ms(size, scaleFactor);
+      case 'mw':
+        result = mw(size, scaleFactor);
         break;
-      case 'mvs':
-        result = mvs(size, scaleFactor);
+      case 'mh':
+        result = mh(size, scaleFactor);
         break;
     }
 

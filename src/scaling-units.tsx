@@ -24,13 +24,13 @@ export const createScalers = (
   ) => size + (verticalScale(size) - size) * Number(factor);
 
   return {
-    s: scale,
-    vs: verticalScale,
-    ms: moderateScale,
-    mvs: moderateVerticalScale,
-    scale,
-    verticalScale,
-    moderateScale,
-    moderateVerticalScale,
+    sw: scale,
+    sh: verticalScale,
+    mw: moderateScale,
+    mh: moderateVerticalScale,
+    scaleWidth: scale,
+    scaleHeight: verticalScale,
+    moderateScaleWidth: moderateScale,
+    moderateScaleHeight: moderateVerticalScale,
   };
 };
