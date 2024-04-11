@@ -101,7 +101,7 @@ const styles = ScaledSheet.create({
   container: {
     padding: '10@mw0.3', // = moderateScaleWidth(10, 0.3)
     width: '50@mw', // = moderateScaleWidth(50)
-    padding: '2@mwr', // = Math.round(moderateScaleWidth(2))
+    padding: '2@mw', // moderateScaleWidth(2)
   },
 });
 ```
