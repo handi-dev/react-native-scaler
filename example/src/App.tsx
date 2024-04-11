@@ -12,7 +12,7 @@ const scaledStyles = ScaledSheet.create({
     justifyContent: 'center',
   },
   button: {
-    width: moderateScaleWidth(250),
+    width: '250@mw0.2',
     height: '80@mw',
     borderColor: '#696969',
     backgroundColor: 'white',
@@ -29,7 +29,7 @@ const scaledStyles = ScaledSheet.create({
     },
   },
   text: {
-    fontSize: '20@mw.3',
+    fontSize: moderateScaleWidth(20),
     fontWeight: 'bold',
   },
 });
@@ -66,7 +66,7 @@ const regularStyles = StyleSheet.create({
 });
 
 const Home = () => {
-  const [isRegular, setIsRegular] = useState(true);
+  const [isRegular, setIsRegular] = useState(false);
 
   let styles = isRegular ? regularStyles : scaledStyles;
   const onChange = () => {
