@@ -41,14 +41,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/handipriyono/react-native-scaler.git"
+    "url": "git+https://github.com/handi-dev/react-native-scaler.git"
   },
   "author": "Handi Priyono <contact@handi.dev> (https://github.com/handipriyono)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/handipriyono/react-native-scaler/issues"
+    "url": "https://github.com/handi-dev/react-native-scaler/issues"
   },
-  "homepage": "https://github.com/handipriyono/react-native-scaler#readme",
+  "homepage": "https://github.com/handi-dev/react-native-scaler#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
