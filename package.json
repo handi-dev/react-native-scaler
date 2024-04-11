@@ -1,6 +1,6 @@
 {
   "name": "react-native-scaler",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "React Native Scaler is a dynamic scaling utility designed to enable seamless and responsive UI design across different device sizes. This library provides a simple and efficient way to adjust the width, height, and other dimensions of your React Native components based on the device’s screen size. With React Native Scaler, you can ensure your application looks great on any device, from small smartphones to large tablets and beyond",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
