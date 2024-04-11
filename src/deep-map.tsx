@@ -1,5 +1,8 @@
 type DeepMapFn = (val: any) => any;
-type MapObjectFn = (obj: Record<string, any>, fn: DeepMapFn) => Record<string, any>;
+type MapObjectFn = (
+  obj: Record<string, any>,
+  fn: DeepMapFn
+) => Record<string, any>;
 
 const deepMap = (obj: any, fn: DeepMapFn): any => {
   const deepMapper = (val: any) => (isObject(val) ? deepMap(val, fn) : fn(val));
@@ -21,6 +24,7 @@ const mapObject: MapObjectFn = (obj, fn) => {
   );
 };
 
-const isObject = (myVar: any): boolean => myVar !== null && typeof myVar === "object";
+const isObject = (myVar: any): boolean =>
+  myVar !== null && typeof myVar === 'object';
 
 export default deepMap;
