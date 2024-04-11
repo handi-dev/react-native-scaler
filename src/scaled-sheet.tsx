@@ -27,15 +27,9 @@ const scaledSheetCreator = (baseWidth = 350, baseHeight = 680) => {
     const size = parseFloat(regexExecResult[1]);
     let scaleFunc = regexExecResult[2];
     const scaleFactor = regexExecResult?.[3]; // string or undefined
-    console.log('scaleFacto1r', scaleFunc);
+
     if (scaleFactor) scaleFunc = scaleFunc.slice(0, -scaleFactor.length); // Remove the factor from it
 
-    console.log(
-      'scaleFactor',
-      scaleFunc,
-      typeof scaleFactor,
-      Number(scaleFactor)
-    );
     const shouldRound = value.endsWith('r');
 
     let result: number = 0;
